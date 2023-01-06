@@ -1,0 +1,8 @@
+.pomodoro-timer {
+  font-size: 12.4rem;
+  font-weight: 700;
+
+  display: flex;
+  align-items: center;
+  margin-top: 1.6rem;
+}

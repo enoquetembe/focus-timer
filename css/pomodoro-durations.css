@@ -1,0 +1,23 @@
+.pomodoro-durations form {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.pomodoro-durations form label {
+  background-color: transparent;
+  color: var(--text-white);
+  
+  display: inline-flex;;
+  align-items: center;
+  padding: 1rem 2rem;
+
+  border: 1px solid var(--bg-white);
+  border-radius: 2rem;
+}
+
+.pomodoro-durations form label:hover {
+  background-color: var(--bg-white);
+  color: #000;
+  cursor: pointer;
+}
