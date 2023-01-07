@@ -25,7 +25,8 @@ body {
   
   font-size: 1.6rem;
 
-  background: url('../assets/bg-code.png') no-repeat;
+  /*background: url('../assets/bg-code.png') no-repeat;*/
+  background-color: var(--bg-black-900);
   background-size: cover;
   color: var(--text-white);
 }

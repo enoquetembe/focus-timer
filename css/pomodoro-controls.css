@@ -2,6 +2,7 @@
   display: flex;
   align-items: center;
   gap: 1.6rem;
+  margin-top: 1.6rem;
 }
 
 .pomodoro-controls button#button-start,
@@ -15,6 +16,10 @@
   font-weight: bolder;
 
   border-radius: 3rem;
+}
+
+.hide {
+  display: none;
 }
 
 .pomodoro-controls button#button-stop,

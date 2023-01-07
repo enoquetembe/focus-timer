@@ -8,7 +8,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="./css/index.css">
   <title>Focus Timer</title>
@@ -24,18 +24,18 @@
     <div class="pomodoro-durations">
       <form action="">
        <div class="input-wraper">
-          <label for="pomodoro">Pomodoro</label>
-          <input type="radio" name="durations" value="Pomodoro" id="pomodoro">
+          <label for="pomodoro" class="active pomodoro-label">Pomodoro</label>
+          <input type="radio" name="durations" value="Pomodoro" id="pomodoro" class="hide">
        </div>
 
        <div class="input-wraper">
-          <label for="short-break">Short Break</label>
-          <input type="radio" name="durations" value="Short Break" id="short-break">
+          <label for="short-break" class="shortBreak-label">Short Break</label>
+          <input type="radio" name="durations" value="Short Break" id="short-break" class="hide">
        </div>
 
        <div class="input-wraper">
-          <label for="short-break">Long Break</label>
-          <input type="radio" name="durations" value="Long Break" id="long-break">
+          <label for="short-break" class="longBreak-label">Long Break</label>
+          <input type="radio" name="durations" value="Long Break" id="long-break" class="hide">
        </div>
       </form>
     </div>
@@ -49,7 +49,7 @@
       <button type="button" id="button-start">
         Start
       </button>
-      <button type="button" id="button-pause">
+      <button type="button" id="button-pause" class="hide">
         Pause
       </button>
 
