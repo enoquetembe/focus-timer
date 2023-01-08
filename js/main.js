@@ -101,3 +101,14 @@ longBreakLabel.addEventListener("click", () => {
   minutesElement.innerText = `${minutes}`.padStart(2, "0")
   secondsElement.innerText = `${seconds}`.padStart(2, "0")
 })
+
+pomodoroLabel.addEventListener("click", () => {
+  pomodoroLabel.classList.add("active")
+  shortBreakLabel.classList.remove("active")
+  longBreakLabel.classList.remove("active")
+
+  const minutes = 25
+  const seconds = 0
+  minutesElement.innerText = `${minutes}`.padStart(2, "0")
+  secondsElement.innerText = `${seconds}`.padStart(2, "0")
+})
