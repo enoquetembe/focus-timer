@@ -1,3 +1,6 @@
+import { Controls } from "./controls.js"
+import { Timer } from "./timer.js"
+
 const pomodoroLabel = document.querySelector(".pomodoro-label")
 const shortBreakLabel = document.querySelector(".shortBreak-label")
 const longBreakLabel = document.querySelector(".longBreak-label")
@@ -11,10 +14,17 @@ const secondsElement = document.querySelector("#seconds")
 
 let minutes = Number(minutesElement.textContent)
 let seconds = Number(secondsElement.textContent)
-let timer
+let timerCount
 
 
+const timer = Timer({
+  minutesElement,
+  secondsElement,
+  timerCount,
+  resetControls: controls.reset
+})
 
+const controls = Controls()
 
 
 shortBreakLabel.addEventListener("click", () => {
@@ -40,8 +50,6 @@ longBreakLabel.addEventListener("click", () => {
   const seconds = 0
   updateTimerDisplay(minutes, seconds)
 
-  console.log(minutesElement, secondsElement)
-
 })
 
 pomodoroLabel.addEventListener("click", () => {
@@ -56,23 +64,19 @@ pomodoroLabel.addEventListener("click", () => {
 
 
 startButton.addEventListener("click", () => {
-  pauseButton.classList.remove("hide")
-  startButton.classList.add("hide")
-
-  countdown()
+  controls.play()
+  timer.countdown()
 })
 
 
 pauseButton.addEventListener("click", () => {
-  pauseButton.classList.add("hide")
-  startButton.classList.remove("hide")
-  clearTimeout(timer)
+  controls.pause()
+  clearTimeout(timerCount)
 })
 
 stopButton.addEventListener("click", () => {
-  resetControls()
-  resetTimer()
-
+  controls.reset()
+  timer.reset()
 })
 
 
